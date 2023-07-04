@@ -33,7 +33,7 @@ Please consider citing the following papers if you use our methods in your resea
 
 ## Data & Requirements
 
-We released the QA datasets with question classes (via TREC question classification) and the question classification model [here](https://drive.google.com/drive/folders/10JPidO9bJwM1FyuEmlNfvaPx3loZNVt8?usp=sharing) 
+We released the QA datasets with question classes (via TREC question classification) and the question classification model [here](https://drive.google.com/drive/folders/1Yxvn1YVyKLTQWTnyU8dNds4kqw058I7T?usp=sharing) 
 
 Required packages: Pytorch, pytorch_pretrained_bert etc. For our running environment see requirements.txt
 
@@ -57,7 +57,7 @@ You can modified the parameters for --train_file, --predict_file, --output_dir a
 
 ## Perform Question Classification with TREC (Optional)
 
-This step is optional for QA4QA KMeans and QADA, we provide the classified datasets [here](https://drive.google.com/drive/folders/10JPidO9bJwM1FyuEmlNfvaPx3loZNVt8?usp=sharing). To perform the classification with TREC taxonomy, first train a question classifier with the [SentEval](https://github.com/facebookresearch/SentEval) package (Model state dict is provided in the link above), then use the saved the model and run `CUDA_VISIBLE_DEVICES=0 python src/qc4qa_trec.py`
+This step is optional for QA4QA KMeans and QADA, we provide the classified datasets [here](https://drive.google.com/drive/folders/1Yxvn1YVyKLTQWTnyU8dNds4kqw058I7T?usp=sharing). To perform the classification with TREC taxonomy, first train a question classifier with the [SentEval](https://github.com/facebookresearch/SentEval) package (Model state dict is provided in the link above), then use the saved the model and run `CUDA_VISIBLE_DEVICES=0 python src/qc4qa_trec.py`
 
 Notice you may have to change the hyperparameters: PATH_SENTEVAL (SentEval root), PATH_TO_W2V (embedding root), MODEL_PATH (infersent model root), QA file path and path to your classification model (i.e., qc4qa_model.pth) in qc4qa_trec.py
 
